@@ -1,0 +1,1 @@
+This is an example of Functional component and Class component

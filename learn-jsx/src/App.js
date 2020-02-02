@@ -12,7 +12,7 @@ class App extends Component{
    return (
 
      <div>
-         <h1>JJJJJ</h1>
+         <h1>Hi Welcome</h1>
      </div>
    )
  }
