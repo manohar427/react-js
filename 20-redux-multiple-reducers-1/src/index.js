@@ -4,10 +4,18 @@ import './index.css';
 import App from './App';
 
 import {Provider} from 'react-redux';
-import {createStore} from "redux";
+import {createStore,applyMiddleware} from "redux";
 import reducer from './reducer/reducer';
 
-const store  = createStore(reducer);
+const logAction = store =>{
+   return next =>{
+       return action =>{
+           const result = next(action);;
+           console.log('caught action: ${JSON.stringify(result)}');
+       }
+   }
+};
+const store  = createStore(reducer,applyMiddleware(logAction));
 ReactDOM.render(
     <Provider store={store}>
         <App/>
