@@ -7,7 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class MyController {
 
 	@RequestMapping("/")
-	public String getName() {
-		return "Manohar";
+	public Customer getName() {
+
+		Customer c = new Customer();
+		c.setAge(12);
+		c.setName("Manohar");
+		return c;
 	}
 }
