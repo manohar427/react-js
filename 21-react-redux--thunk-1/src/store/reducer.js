@@ -16,10 +16,9 @@ const reducer = (state = initialState, action) => {
         age: state.age + action.value,
         loading:false,
         data:action.data,
-        history: state.history.concat({ id: Math.random(), age: state.age + action.value })
+        history: state.history.concat({ id: Math.random(), age: state.age + action.value+":"+action.data })
       };
       break;
-
     case "AGE_DOWN":
       return {
         ...state,
@@ -35,13 +34,15 @@ const reducer = (state = initialState, action) => {
       break;
     case "LOADING":
       console.log('Reducer ... Loading');
+      console.log('Reducer ... Loading:'+JSON.stringify(state));
+
       return {
         ...state,
-        loading: true
+        loading: true,
+        data:"Loading.........."
       }
       break;  
   }
   return newState;
 };
-
 export default reducer;
