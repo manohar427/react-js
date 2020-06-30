@@ -11,11 +11,7 @@ const data = [
 ];
 
 class App extends React.Component{
-  state = {
-    flag:false
-  }
-
-  
+   
   constructor(props) {
     super(props);
 
@@ -25,7 +21,7 @@ class App extends React.Component{
     };
   }
   focusTextInput=(e)=> {
-    if (this.csvClick) 
+   // if (this.csvClick) 
     this.csvClick.link.click();
 };
   render() {
@@ -36,7 +32,7 @@ class App extends React.Component{
 
         <input
           type="button"
-          value="Focus the text input"
+          value="Export to CSV"
           onClick={this.focusTextInput.bind(this)}
         />
  
