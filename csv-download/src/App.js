@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import { CSVLink,CSVDownload } from "react-csv";
-import axios from 'axios';
+import { CSVLink } from "react-csv";
+
  
 const data = [
   ["FirstName", "Last Name", "Email Test"],
@@ -10,8 +10,6 @@ const data = [
   ["Yezzi", "Min l3b", "ymin@cocococo.com"]
 ];
 
-
-//let csvLinkRef = React.createRef();
 class App extends React.Component{
   state = {
     flag:false
@@ -21,43 +19,32 @@ class App extends React.Component{
   constructor(props) {
     super(props);
 
-    //this.textInput = null;
     this.csvClick = null;
-
-    /*
-    this.setTextInputRef = element => {
-      this.textInput = element;
-    };
-    */
-    //setcsv
     this.setcsv = element => {
       this.csvClick = element;
     };
 
-    this.focusTextInput = () => {
-      // Focus the text input using the raw DOM API
-      if (this.textInput) 
-      this.textInput.focus();
+ /*   this.focusTextInput = () => {
 
     if (this.csvClick) 
         this.csvClick.link.click();
     };
+  }*/
   }
-
-  focusTextInput() {
-   
-  }
- 
+  focusTextInput=(e)=> {
+    if (this.csvClick) 
+    this.csvClick.link.click();
+};
   render() {
 
  return (<>
-  <CSVLink data={data} filename="test.csv"  ref={this.setcsv} target="_self" >OK</CSVLink>
-  <br/>
+  <CSVLink data={data} filename="test.csv"  ref={this.setcsv} target="_self" ></CSVLink>
+  
 
         <input
           type="button"
           value="Focus the text input"
-          onClick={this.focusTextInput}
+          onClick={this.focusTextInput.bind(this)}
         />
  
  </>)
