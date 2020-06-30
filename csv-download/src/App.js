@@ -23,13 +23,6 @@ class App extends React.Component{
     this.setcsv = element => {
       this.csvClick = element;
     };
-
- /*   this.focusTextInput = () => {
-
-    if (this.csvClick) 
-        this.csvClick.link.click();
-    };
-  }*/
   }
   focusTextInput=(e)=> {
     if (this.csvClick) 
