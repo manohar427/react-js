@@ -19,8 +19,8 @@ class App extends Component
 
 const mapStoreToProps = (store)=>{
   return{
-      aX:store.a,
-      bX:store.b
+      aX:store.rA.a,
+      bX:store.rB.b
   };
 };
 

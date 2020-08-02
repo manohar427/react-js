@@ -28,8 +28,6 @@ class App extends React.Component{
 
  return (<>
   <CSVLink data={data} filename="test.csv"  ref={this.setcsv} target="_self" ></CSVLink>
-  
-
         <input
           type="button"
           value="Export to CSV"

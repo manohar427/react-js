@@ -3,6 +3,7 @@ const initialState = {
   };
   
   const reducer = (state = initialState, action) => {
+    console.log("ACTION"+JSON.stringify(action));
     if (action.type === "UPDATE_A") {
       return {
         ...state,

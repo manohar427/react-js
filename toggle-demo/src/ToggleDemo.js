@@ -4,7 +4,7 @@ import ReactTooltip from 'react-tooltip';
 import Button from 'react-bootstrap/Button';
 
 
-class App extends React.Component {
+class ToggleDemo extends React.Component {
   state = { toggleShow: true};
  
   onToggle1 = () => {
@@ -46,4 +46,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default ToggleDemo;
