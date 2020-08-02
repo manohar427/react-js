@@ -5,9 +5,9 @@ import axios from 'axios';
 
 class  App extends React.Component {
   render(){
-    axios.get("http://demo-my-test.2886795366-80-simba02.environments.katacoda.com/").then(d=>{
-      console.log(d);
-    });
+   // axios.get("http://demo-my-test.2886795366-80-simba02.environments.katacoda.com/").then(d=>{
+    //  console.log(d);
+ //   });
   return (
     <div className="App">
      Hi Manohar s
