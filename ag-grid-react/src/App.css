@@ -1,0 +1,25 @@
+.test{
+    
+    border-color: red;
+    border-style: solid;
+}
+
+.test1{
+    
+    border-color: blue;
+    border-style: solid;
+}
+
+.hide1{
+    visibility: hidden;
+    display: none;
+}
+
+.show1{
+    visibility:visible;
+}
+
+.windowsize{
+    min-width: 800px;
+    min-height: 600px;
+}
