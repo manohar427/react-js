@@ -1,23 +1,27 @@
 import React,{useState,useEffect} from 'react';
 
-function App() {
-  //const [count, setc] = useState(0);
+function ObjectDemo() {
    
   function initialset(){
     console.log('initial set called ');
-    return 0;
+    return {count:0,color:'red'};
   }
-  const [count, setc] = useState(()=>initialset());
-
+  const [obj, setc] = useState(()=>initialset());
+  let color = obj.color;
+  let count = obj.count;
   useEffect(() => {
-    document.title = `You clicked ${count} times`;  
+    document.title = `You clicked ${count} - ${color} times`;  
   });
   function myIfunction(){
-    setc(count=>count+1)
+    setc(obj=> {
+      return {...obj,count:obj.count+1}    
+    })
   }
 
   function myDfunction(){
-    setc(a=>a-1)
+    setc(obj=> {
+      return {...obj,count:obj.count-1}    
+    })
   }
 
   return (
@@ -33,4 +37,4 @@ function App() {
   );
 }
 
-export default App;
+export default ObjectDemo;
