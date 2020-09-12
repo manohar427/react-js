@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 
-import withCounter from './ClickCounter';
+import withCounter from './withCounter';
 class Hoc extends Component {
     render() {
         let {counter,increment,name} = this.props;
