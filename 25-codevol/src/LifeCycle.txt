@@ -1,0 +1,19 @@
+1.mounting:
+
+  constructor
+  getderivedstatefromprops
+  render
+  componentDidmount
+
+2.updating:
+  getderivedstatefromprops -return object
+  shouldComponentUpdate -return true/false
+  render
+  getsnapshotBeforeUpdate(preprops,prestate) -return object
+  componentDidUpdate(preprops,prestate,snapshot) -
+
+3.unmounting:
+  componentWillUnmount
+4.error/:
+  static getderivedstatefromError(error)
+  componentDidCatch(error,info)
