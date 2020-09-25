@@ -1,6 +1,6 @@
 import React, { PureComponent,Component } from 'react'
 
-class PureComp extends Component {
+class PureComp extends PureComponent {
     constructor(){
         super()
         this.state = {name:'abc'}
