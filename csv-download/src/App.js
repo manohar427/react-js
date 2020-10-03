@@ -12,9 +12,8 @@ const data = [
 
 class App extends React.Component{
    
-  constructor(props) {
-    super(props);
-
+  constructor() {
+    super();
     this.csvClick = null;
     this.setcsv = element => {
       this.csvClick = element;
@@ -27,17 +26,14 @@ class App extends React.Component{
   render() {
 
  return (<>
-  <CSVLink data={data} filename="test.csv"  ref={this.setcsv} target="_self" ></CSVLink>
-        <input
+    <CSVLink data={data} filename="test.csv"  ref={this.setcsv} target="_self"  ></CSVLink>
+      <input
           type="button"
           value="Export to CSV"
           onClick={this.focusTextInput.bind(this)}
-        />
- 
+    />
  </>)
-  }
-  
+  }  
 }
-
 
 export default App;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MyContext from './RJ_12_ComtextMain';
+import {MyContext} from './RJ_12_ComtextMain';
 
 
 class RJ_12_ContextTest extends Component {
