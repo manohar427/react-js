@@ -24,15 +24,14 @@ class App extends React.Component{
     this.csvClick.link.click();
 };
   render() {
-
- return (<>
-    <CSVLink data={data} filename="test.csv"  ref={this.setcsv} target="_self"  ></CSVLink>
-      <input
+    return (<>
+      <CSVLink data={data} filename="test.csv"  ref={this.setcsv} target="_self"  ></CSVLink>
+        <input
           type="button"
           value="Export to CSV"
           onClick={this.focusTextInput.bind(this)}
-    />
- </>)
+      />
+    </>)
   }  
 }
 
