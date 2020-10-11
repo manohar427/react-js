@@ -13,14 +13,20 @@ const reducer = (state,action) =>{
             return state;
     }
 }
-export default function RJ_1_UseReduder() {
+export default function RJ_3_UseReduder() {
     const [count,dispatch] = useReducer(reducer,initialState)
+    const [countTwo,dispatchTwo] = useReducer(reducer,initialState)
     return (
         <div>
             Count:{count}<br/>
             <button onClick={()=>dispatch('inc')}>Increment</button>
             <button onClick={()=>dispatch('dec')}>Decrement</button>
             <button onClick={()=>dispatch('reset')}>Reset</button>
+
+                Two Count:{countTwo}<br/>
+            <button onClick={()=>dispatchTwo('inc')}>Increment</button>
+            <button onClick={()=>dispatchTwo('dec')}>Decrement</button>
+            <button onClick={()=>dispatchTwo('reset')}>Reset</button>
         </div>
     )
 }
