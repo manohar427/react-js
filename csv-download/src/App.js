@@ -2,13 +2,19 @@ import React from 'react';
 import './App.css';
 import { CSVLink } from "react-csv";
 
- 
+/* 
 const data = [
   ["FirstName", "Last Name", "Email Test"],
   ["Ahmed", "Tomi", "ah@smthing.co.com"],
   ["Raed", "Labes", "rl@smthing.co.com"],
   ["Yezzi", "Min l3b", "ymin@cocococo.com"]
 ];
+*/
+const data = `firstname,lastname
+Ahmed,Tomi
+Raed,Labes
+Yezzi,Min l3b
+`;
 
 class App extends React.Component{
    
