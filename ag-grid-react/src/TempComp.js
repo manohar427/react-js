@@ -17,7 +17,12 @@ class TempComp extends Component {
     this.state = {
       fra:{abc:Temp},
       style:{width:'100%',height:'100%',overflow: 'hidden'},
-      
+      defaultColDef: {
+        resizable: true,
+        sortable: true,
+        wrapText: true,     
+        autoHeight: true, 
+      },
       columnDefs: [
      
         {
@@ -51,14 +56,14 @@ class TempComp extends Component {
         }
           
         }, {
-        headerName: "Model", field: "model", sortable: true, filter: true,flex:2
+        headerName: "Model", field: "model", sortable: true, filter: true,width:100
         },{
         headerName: "Price", field: "price", sortable: true, filter: true,flex:1
       }
     ],
      
       rowData: [
-        {make: "Toyota", model: "Celica", price: 35000,city:'blr',spl:'12'}, 
+        {make: "Toyota", model: "Celica kefhsefhsdkjf kjdfsadkfdskf akdfsdklfjsd sdlkfjsdokfjdslkfsdf ", price: 35000,city:'blr',spl:'12'}, 
         {make: "Ford", model: "Mondeo", price: 32000,city:'del'}, 
         {make: "Porsche", model: "Boxter", price: 72000,city:'hyd'},        
       ]
@@ -109,7 +114,8 @@ let all = [{
                   columnDefs={this.state.columnDefs}
                   rowData={this.state.rowData}    
                   frameworkComponents={this.state.fra}   
-                  onGridReady={this.onGridReady.bind(this)}         
+                  onGridReady={this.onGridReady.bind(this)}  
+                  defaultColDef={this.state.defaultColDef}       
               />
           </div>
       

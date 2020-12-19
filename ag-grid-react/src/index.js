@@ -12,7 +12,7 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Parent/>
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );
