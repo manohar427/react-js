@@ -20,7 +20,7 @@ export default class useRefClass2 extends Component {
     render() {
         return (
             <div>
-                {this.state.count}    <br/>
+                {this.state.count}<br/>
                 <button onClick={()=>clearInterval(this.intvl)}>Reset</button>
             </div>
         )
