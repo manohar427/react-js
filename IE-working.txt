@@ -1,0 +1,7 @@
+npm install react-app-polyfill
+
+add ie version
+    "development": [
+      "last 1 chrome version",
+      "last 1 ie version"
+    ]
